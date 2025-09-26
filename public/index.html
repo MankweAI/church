@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Nugget Creator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🎬 Video Nugget Creator</h1>
+        <p>Create short video or audio clips from any video URL.</p>
+      </header>
+
+      <main>
+        <form id="video-form">
+          <div class="form-group">
+            <label for="video-url">Video URL</label>
+            <input
+              type="text"
+              id="video-url"
+              placeholder="e.g., https://www.youtube.com/watch?v=..."
+              required
+            />
+          </div>
+
+          <div class="form-group-inline">
+            <div class="form-group">
+              <label for="start-time">Start Time</label>
+              <input
+                type="text"
+                id="start-time"
+                placeholder="e.g., 50:40"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="end-time">End Time</label>
+              <input
+                type="text"
+                id="end-time"
+                placeholder="e.g., 51:22"
+                required
+              />
+            </div>
+          </div>
+
+          <button type="submit" id="submit-btn">Create Voice Clip</button>
+        </form>
+
+        <div id="status-area" class="hidden">
+          <p id="status-message"></p>
+          <a id="download-link" href="#" target="_blank" class="hidden"
+            >Download Your Clip (.mp3)</a
+          >
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
